@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<title>My first web page</title>
+
+  </head>
+  <body>
+    <script>
+      
+      function triggerPrompt(){
+
+        var name = prompt("Enter Name", "John Snow");
+
+        if(name){
+          console.log("Will Add to Web Page");
+
+          var new_node = document.createElement("div");
+          new_node.innerText = name;
+          document.body.appendChild(new_node);
+        }
+      }
+
+      function onInput(){
+        console.log(document.getElementById("easylife").value)
+      }
+
+      function search(){
+        console.log(document.getElementById("easylife").value)
+        document.body.innerHTML += document.getElementById("easylife").value
+      }
+      
+      function student_creator(fn, ln){
+        var s = {fn: fn, ln: ln} ;
+        return s;
+      }
+
+      // function Person(nm, ag, h){
+      //   this.name = nm;
+      //   this.age = ag;
+      //   this.height = h;
+      // }
+    </script>
+    <button onclick="goBack()">Back</button>
+    <button onclick="goForward()">Forward</button>
+    <button onclick="openNewTab()">New Tab</button>
+
+
+    <form method="get" action="submit.html">
+      <label>First name</label><br>
+      <input type="text" name="firstName" placeholder="Enter your first name"> <br>
+
+      <label>Last name</label><br>
+      <input type="text" name="lastName" placeholder="Enter your last name"><br>
+
+      <label>Gender</label>
+      <input type="radio" name="gender" value="Male" checked>Male<br>
+      <input type="radio" name="gender" value="Female">Female<br>
+      <input type="radio" name="gender" value="Other">Other<br>
+
+      <br>
+      <input type="submit" name="submit">
+    </form>
+    <!-- <input id="easylife">
+    <button onclick="search()">Search</button> -->
+    <!-- <script>
+      function clearPage() {
+        alert("You are about to clear the web page")
+        window.document.write("");
+      }
+
+      function clearPageWithConfirmation(){
+        var response = confirm("Do you really want to clear the page?")
+        if(response){
+          document.write("");
+        }
+      }
+
+      function enterName(){
+        var response = prompt("Name", "");
+        if(response != null){
+          console.log(response);
+        }
+      }
+
+    </script>
+
+    <div> Hello World </div>
+    <input type="text" name="username" /><br>
+    <button onclick="clearPage() ">Click me</button>
+
+    <button onclick="alert('ALert Triggered!')">Trigger Alert</button><br>
+
+    <button onclick="clearPageWithConfirmation()">CLear Page?</button>
+
+    <button onclick="enterName()">Enter the data</button>
+
+    <ul id="myList"></ul> -->
+    <script type="text/javascript" src="js/script.js"></script> 
+  </body>
+</html>
